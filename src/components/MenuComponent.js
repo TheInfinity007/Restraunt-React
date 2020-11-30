@@ -6,16 +6,20 @@ class Menu extends Component{
 
 	constructor(props){
 		super(props);
+
+		console.log("Menu Component constructor invoked");
+
 	}
 
 	componentDidMount(){
-		console.log("Menu Component componentDidMount is invoked2");
+		console.log("Menu Component componentDidMount invoked");
 	}
 
 	
 
 	render(){
-
+		console.log("Menu Component render invoked");
+ 
 		const menu = this.props.dishes.map((dish) => {
 			return (
 				<div key={dish.id} className="col-12 col-md-5 m-1">
