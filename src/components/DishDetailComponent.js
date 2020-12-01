@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, CardText, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 
 //  user defined functional component
 function RenderDish({dish}){	
@@ -44,8 +46,19 @@ const DishDetail = (props) => {
 		return(
 			<div className="container">
 				<div className="row">
+					<Breadcrumb>
+						<BreadcrumbItem>	<Link to="/menu">Menu</Link></BreadcrumbItem>
+						<BreadcrumbItem active> {props.dish.name} </BreadcrumbItem>
+					</Breadcrumb>
+					<div className="col-12">
+						<h3>Menu</h3>
+						<hr />
+					</div>
+				</div>
+
+				<div className="row">
 					<RenderDish dish={props.dish} />
-					<RenderComments comments={props.dish.comments} />
+					<RenderComments comments={props.comments} />
 				</div>
 			</div>
 		);
