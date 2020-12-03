@@ -1,6 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardBody, CardTitle, CardText, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentFormComponent';
+
+
 
 
 //  user defined functional component
@@ -33,6 +36,7 @@ function RenderComments({comments}){
 						);
 					})}
 				</ul>
+				<CommentForm />
 			</div>
 		)
 	}else{
