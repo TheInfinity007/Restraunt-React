@@ -5,7 +5,7 @@ import { Control, LocalForm, Errors } from 'react-redux-form';
 const minLength = (len) => (val) => (val) && (val.length >= len);
 const maxLength = (len) => (val) => !(val) || (val.length <= len); 
 
-class CommentForm extends Component{
+class commentForm extends Component{
 
 	constructor(props){
 		super(props);
@@ -14,7 +14,6 @@ class CommentForm extends Component{
 			isCommentModalOpen: false
 		}
 		this.toggleCommentModal = this.toggleCommentModal.bind(this);
-
 	}
 
 	toggleCommentModal(){
@@ -62,4 +61,4 @@ class CommentForm extends Component{
 	}
 }
 
-export default CommentForm;
+export default commentForm;
