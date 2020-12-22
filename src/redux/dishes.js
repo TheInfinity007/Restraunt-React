@@ -1,6 +1,12 @@
+// Dishes reducers
+
 import * as ActionTypes from './ActionTypes';
 
-export const Dishes = (state = { isLoading: true, errMess: null, dishes: [] }, action) => {
+export const Dishes = (state = { 
+		isLoading: true, 
+		errMess: null, 
+		dishes: [] 
+	}, action) => {
 	switch(action.type){
 		case ActionTypes.ADD_DISHES:
 			return {...state, isLoading: false, errMess: null, dishes: action.payload};
