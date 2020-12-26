@@ -1,5 +1,4 @@
 // Dishes reducers
-
 import * as ActionTypes from './ActionTypes';
 
 export const Dishes = (state = { 
